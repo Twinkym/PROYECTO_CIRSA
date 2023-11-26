@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Dashboard, Cirsa, Recreativas, Usuario, ">
+    <meta name="description" content="Dashboard de afiliado de Cirsa">
+    <meta name="author" content="David De La Puente">
+    <link rel="stylesheet" href="./CSS/dasboard.css">
+    <title>Dashboard de Afiliado</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="dashboard">
+        <h1>Dashboard de Afiliado</h1>
+        <div class="user-card">
+            <form id="user-form">
+                <label for="avatar-upload">Avatar:</label>
+                <img id="avatar" src="./IMG/default-avatar-profile-picture-male-icon.svg" alt="Avatar del usuario">
+                <input type="file" id="avatar-upload" accept="image/*" onchange="updateAvatar()">
+                <button type="button" class="animated-button" onclick="toggleMenu()">Menú</button>
+                <div class="dropdown-menu">
+                    <a href="#">Sección 1</a>
+                    <a href="#">Sección 2</a>
+                    <a href="#">Sección 3</a>
+                    <!-- Add more options as needed -->
+                </div>
+                <div class="user-info">
+                    <label for="user-description">Descripción:</label>
+                    <textarea id="user-description" rows="3" placeholder="Ingresa tu descripción"></textarea><br>
+                    <label for="user-balance">Balance:</label>
+                    <p id="user-balance">$1000</p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <p>URL de Afiliado: <span id="affiliate-url">tu-url-de-afiliado-aqui</span></p>
+    <button onclick="customizePage()">Personalizar</button>
+    <div id="metrics">
+        <!-- [OPCIONAL] Aquí mostrar las métricas de personas registradas -->
+    </div>
+    </div>
+    <script src="./JS/dasboard.js"></script>
+</body>
+
+</html>
