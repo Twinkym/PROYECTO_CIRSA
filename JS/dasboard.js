@@ -14,24 +14,25 @@ function simulateMetrics() {
 }
 
 function toggleMenu() {
-    var dropdownMenu = document.querySelection('.dropdown-menu');
+    var dropdownMenu = document.querySelector('.dropdown-menu');
     dropdownMenu.style.display = (dropdownMenu.style.display == 'block') ? 'none' : 'block';
 }
 
 function updateAvatar() {
-    let = avatarInput = document.getElementById('avatar-upload');
+    let avatarInput = document.getElementById('avatar-upload');
     let avatarImage = document.getElementById('avatar');
 
     let file = avatarInput.files[0];
 
     if (file) {
-        let reader = FileReader();
+        let reader = new FileReader();
         reader.onloadend = (e) => {
             avatarImage.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
+        };
+        reader.readAsDataURL(file);
     }
 }
+
 function updateUserDetails() {
     let userDescription = document.getElementById('user-description').value;
     let userBalance = document.getElementById('user-balance').textContent;
